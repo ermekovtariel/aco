@@ -1,0 +1,16 @@
+.border-dashed { --bs-border-style: dashed; }
+.cards{
+    width: 250px;
+    color: var(--bs-heading-color);
+}
+@media (min-width: 1400px) {
+    .tabbed{
+     white-space: pre;
+    }
+}
+
+@media (max-width: 1400px) {
+.tabbed{
+        white-space-collapse: preserve-breaks;
+}
+}

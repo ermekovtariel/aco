@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Astro v5.9.2">
+    <title>ЭКОСОЦИАЛЬНАЯ ГАРМОНИЯ</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/jumbotrons/">
+    <script src="../assets/js/color-modes.js"></script>
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="theme-color" content="#712cf9">
+    <link href="jumbotrons.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./assets/images/logo.png">
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem
+            }
+        }
+
+        .b-example-divider {
+            width: 100%;
+            height: 3rem;
+            background-color: #0000001a;
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em #0000001a, inset 0 .125em .5em #00000026
+        }
+
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor
+        }
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden
+        }
+
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch
+        }
+
+        .btn-bd-primary {
+            --bd-violet-bg: #712cf9;
+            --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+            --bs-btn-font-weight: 600;
+            --bs-btn-color: var(--bs-white);
+            --bs-btn-bg: var(--bd-violet-bg);
+            --bs-btn-border-color: var(--bd-violet-bg);
+            --bs-btn-hover-color: var(--bs-white);
+            --bs-btn-hover-bg: #6528e0;
+            --bs-btn-hover-border-color: #6528e0;
+            --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+            --bs-btn-active-color: var(--bs-btn-hover-color);
+            --bs-btn-active-bg: #5a23c8;
+            --bs-btn-active-border-color: #5a23c8
+        }
+
+        .bd-mode-toggle {
+            z-index: 1500
+        }
+
+        .bd-mode-toggle .bi {
+            width: 1em;
+            height: 1em
+        }
+
+        .bd-mode-toggle .dropdown-menu .active .bi {
+            display: block !important
+        }
+    </style>
+</head>
+
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+        <symbol id="check2" viewBox="0 0 16 16">
+            <path
+                d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z">
+            </path>
+        </symbol>
+        <symbol id="circle-half" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+        </symbol>
+        <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+            <path
+                d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z">
+            </path>
+            <path
+                d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z">
+            </path>
+        </symbol>
+        <symbol id="sun-fill" viewBox="0 0 16 16">
+            <path
+                d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z">
+            </path>
+        </symbol>
+    </svg>
+    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle"> <button
+            class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button"
+            aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)"> <svg
+                class="bi my-1 theme-icon-active" aria-hidden="true">
+                <use href="#circle-half"></use>
+            </svg> <span class="visually-hidden" id="bd-theme-text">Тема</span> </button>
+        <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+            <li> <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light"
+                    aria-pressed="false"> <svg class="bi me-2 opacity-50" aria-hidden="true">
+                        <use href="#sun-fill"></use>
+                    </svg>
+                    Светлая
+                    <svg class="bi ms-auto d-none" aria-hidden="true">
+                        <use href="#check2"></use>
+                    </svg> </button> </li>
+            <li> <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark"
+                    aria-pressed="false"> <svg class="bi me-2 opacity-50" aria-hidden="true">
+                        <use href="#moon-stars-fill"></use>
+                    </svg>
+                    Темная
+                    <svg class="bi ms-auto d-none" aria-hidden="true">
+                        <use href="#check2"></use>
+                    </svg> </button> </li>
+            <li> <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto"
+                    aria-pressed="true"> <svg class="bi me-2 opacity-50" aria-hidden="true">
+                        <use href="#circle-half"></use>
+                    </svg>
+                    Автоматическая
+                    <svg class="bi ms-auto d-none" aria-hidden="true">
+                        <use href="#check2"></use>
+                    </svg> </button> </li>
+        </ul>
+    </div>
+    <img class="d-none" src="./logo.png" alt="logo_image">
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+        <symbol id="bootstrap" viewBox="0 0 118 94">
+            <title>ЭКОСОЦИАЛЬНАЯ ГАРМОНИЯ</title>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z">
+            </path>
+        </symbol>
+        <symbol id="arrow-right-short" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z">
+            </path>
+        </symbol>
+        <symbol id="check2-circle" viewBox="0 0 16 16">
+            <path
+                d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z">
+            </path>
+            <path
+                d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z">
+            </path>
+        </symbol>
+    </svg>
+    <div class="container my-5">
+        <div class="p-5 text-center bg-body-tertiary rounded-3">
+            <!-- <svg class="bi mt-4 mb-3" style="color: var(--bs-indigo);" width="100" height="100" aria-hidden="true"> -->
+            <!-- <use xlink:href="#bootstrap"></use> -->
+            <img class="bi mt-4 mb-3" style="color: var(--bs-indigo);" width="110" height="100" aria-hidden="true"
+                src="./assets/images/logo.png" alt="logo_image">
+            <!-- </svg> -->
+            <img class="d-none" src="./logo.png" alt="logo_image">
+            <h1 class="text-body-emphasis">ЭКОСОЦИАЛЬНАЯ ГАРМОНИЯ</h1>
+            <p class="col-lg-8 mx-auto fs-5 text-muted">
+                МЕЖДУНАРОДНЫЙ СОЛИДАРНЫЙ ФОРУМ - ИПОТЕЧНОЙ ИЛИ РЫНОЧНОЙ НЕДОСТУПНОСТИ ЖИЛИЩНЫХ И ОТОПИТЕЛЬНЫХ
+                ПОТРЕБНОСТЕЙ
+                <br>
+                <br>
+                БИШКЕК, ПРОСПЕКТ ЧУЙ - 205, ЖОГОРКУ КЕНЕШ КР
+                <br>
+                21 - ОКТЯБРЯ 2025 - ГОДА, В 10.00 - 18.00 ЧАСОВ
+            </p>
+        </div>
+    </div>
+    <div class="b-example-divider"></div>
+    <div class="container my-5 ">
+        <div class="p-5 text-left bg-body-tertiary rounded-3">
+            <span class="col-lg-8 mx-auto fs-5 text-muted tabbed">
+                &#9;Все глобальные проблемы современности - определяются жилищными и отопительными потребностями, из -
+                за их ипотечной или рыночной недоступности. Указанные потребности не имеют никакой структуры, службы и
+                т.д.. Впоследствии, чего все глобальные проблемы современности возникают непрерывно.
+                <br>
+                &#9;Бездомные, безработные и бедные постоянно накопливаясь в новостройках столицы, уже трижды - 2005 -
+                2010 - и 2020 - годах совершили государственный переворот с революционным захватом пригородных земель. В
+                последствии эти новостройки - и определили столичный смог, показатели которых бьют все мировые рекорды.
+                Если, после 3 - "каменного" переворота, Садыр Жапаров и Камчыбек Ташиев не остановили традиционные
+                революционные земельные захваты и торговые разграбления, то ещё больше стали бы столичные новостройки, с
+                адекватным увеличением столичного смога. Остановленные бездомные от земельных захватов остаются в режиме
+                ожидания вот уже 5 лет. Они едва оплачивая за времянку, ежемесячно находятся под угрозой выселения.
+                <br>
+                &#9;В свою очередь, миллионные миграции бездомных или безработных - осиротили сотни тысяч детей при
+                живых родителях. Целое невоспитанное и чёрствое поколение - является последствием жилищного кризиса -
+                ипотечной недоступности.
+                <br>
+                &#9;Если, социальные жилищные потребности определяют - революционные земельные захваты, сотни тысяч
+                сирот миллионной миграции и т.д., то отопительные потребности - рыночной недоступности являются причиной
+                энергетических, экологических и экономических проблем современности.
+                <br>
+                &#9;Ежедневное отопительное электропотребление 60-70 млн. кВт определило энергетической чрезвычайной
+                ситуации. Импортирование до 5 млрд. кВт увеличивает убытков энергетиков.
+                <br>
+                &#9;Рыночное несоответствие 600 тыс. отопительных абонентов увеличели энергетических убытков более 150
+                млрд.сомов ($1 / 87 сом). Теперь настоящие отопительные убытки переданы местным властям, которые за 3
+                года должны избавиться от них с адекватным увеличением абонентской платы. Массовые протесты городских
+                жителей ожидаются в ближайшие годы. Протесная масса бездомных будет увеличена за счёт отопительных
+                абонентов.
+                <br>
+                &#9;Ежегодное сжигание 3-4 млн. тонны угля - 65% сгораемости, сокращают ледники Центральной Азии, с
+                реальной угрозой опустынивания приграничных рек. Квартиранты новостроек не могут даже уголь купить.
+                Всякие тряпки, щины и т.д. сжигают, чтобы не замёрзнуть. Отопительный голод - может повлечь за собой
+                катастрофические последствия.
+                <br>
+                &#9;Не менее 70% тепла теряются из домов и зданий, из-за изоляционного несоответствия. Настоящая
+                отопительная "чёрная дыра" поглащает огромных ресурсы энергоносителей и т.д., без ликвидации которой
+                энергетические, экологические и экономические проблемы останутся нерешенными.
+                <br>
+                &#9;Теперь, без структурного, инвестиционного, грантового и производственного обеспечения указанных
+                потребностей - современные глобальные проблемы не решатся. В этой связи, требуется Национальное
+                договорное единство, включающая носителей глобальных проблем современности и всех заинтересованных
+                солидарных сторон. Обязательства и преимущества каждой стороны мандатируются.
+                <br>
+                &#9;Для торжественного подписания Национального соглашения - созывается международный солидарный форум
+                на 21 - октября 2025 - года. Его организационный штаб проводит круглые столы для каждой стороны
+                Национального соглашения и согласует их мандаты для подписания на созываемом международном форуме.
+                <br>
+                &#9;Настоящее Национальное договорное единство возглавляется президентом страны с включением всех
+                заинтересованных и солидарных сторон. Только так, всем миром ликвидируем все глобальные проблемы
+                современности. Устраним их первопричины в договорном порядке. Исключим исполнительскую
+                безответственность.
+            </span>
+        </div>
+    </div>
+    <div class="b-example-divider"></div>
+    <div class="container my-5 ">
+        <div>
+            <img src="./assets/images/post_3.png" alt="post_image" class="img-fluid rounded-3 mb-4"
+                style="width: 100%; height: auto;">
+        </div>
+        <div>
+            <img src="./assets/images/post_4.png" alt="post_image" class="img-fluid rounded-3 mb-4"
+                style="width: 100%; height: auto;">
+        </div>
+    </div>
+    <div class="b-example-divider"></div>
+    <div class="my-5">
+        <div class="p-5 text-center bg-body-tertiary d-flex flex-wrap justify-content-center gap-5">
+            <a href="./assets/pdf_files/Национальное соглашение.pdf"
+                class="cards text-center d-flex flex-column align-items-center gap-4 border p-5 rounded-3 text-decoration-none"
+                target="_blank" rel="noopener noreferrer">
+                <h5>Национальное соглашение</h5>
+                <img style="color: var(--bs-indigo);" width="100" height="100" aria-hidden="true"
+                    src="./assets/images/pdf_icon.png" alt="pdf_icon">
+                <button class="d-inline-flex align-items-center btn btn-primary btn-sm px-4 rounded-pill" type="button">
+                    Скачать PDF
+                </button>
+            </a>
+            <a href="./assets/pdf_files/Национальный постамент.pdf"
+                class="cards text-center d-flex flex-column align-items-center gap-4 border p-5 rounded-3 text-decoration-none"
+                target="_blank" rel="noopener noreferrer">
+                <h5>Национальный постамент</h5>
+                <img style="color: var(--bs-indigo);" width="100" height="100" aria-hidden="true"
+                    src="./assets/images/pdf_icon.png" alt="pdf_icon">
+                <button class="d-inline-flex align-items-center btn btn-primary btn-sm px-4 rounded-pill" type="button">
+                    Скачать PDF
+                </button>
+            </a>
+        </div>
+    </div>
+    <div class="b-example-divider"></div>
+    <div class="my-5">
+        <div class="p-5 text-center bg-body-tertiary d-flex flex-wrap justify-content-center gap-5">
+            <a href="./assets/pdf_files/Президентский мандат.pdf"
+                class="cards text-center d-flex flex-column align-items-center gap-4 border p-5 rounded-3 text-decoration-none"
+                target="_blank" rel="noopener noreferrer">
+                <h5>Президентский мандат</h5>
+                <img style="color: var(--bs-indigo);" width="100" height="100" aria-hidden="true"
+                    src="./assets/images/pdf_icon.png" alt="pdf_icon">
+                <button class="d-inline-flex align-items-center btn btn-primary btn-sm px-4 rounded-pill" type="button">
+                    Скачать PDF
+                </button>
+            </a>
+            <a href="./assets/pdf_files/Парламентский мандат.pdf"
+                class="cards text-center d-flex flex-column align-items-center gap-4 border p-5 rounded-3 text-decoration-none"
+                target="_blank" rel="noopener noreferrer">
+                <h5>Парламентский мандат</h5>
+                <img style="color: var(--bs-indigo);" width="100" height="100" aria-hidden="true"
+                    src="./assets/images/pdf_icon.png" alt="pdf_icon">
+                <button class="d-inline-flex align-items-center btn btn-primary btn-sm px-4 rounded-pill" type="button">
+                    Скачать PDF
+                </button>
+            </a>
+            <a href="./assets/pdf_files/Международные кредиторы.pdf"
+                class="cards text-center d-flex flex-column align-items-center gap-4 border p-5 rounded-3 text-decoration-none"
+                target="_blank" rel="noopener noreferrer">
+                <h5>Международные кредиторы</h5>
+                <img style="color: var(--bs-indigo);" width="100" height="100" aria-hidden="true"
+                    src="./assets/images/pdf_icon.png" alt="pdf_icon">
+                <button class="d-inline-flex align-items-center btn btn-primary btn-sm px-4 rounded-pill" type="button">
+                    Скачать PDF
+                </button>
+            </a>
+            <a href="./assets/pdf_files/Международных инвесторов.pdf"
+                class="cards text-center d-flex flex-column align-items-center gap-4 border p-5 rounded-3 text-decoration-none"
+                target="_blank" rel="noopener noreferrer">
+                <h5>Международных инвесторов</h5>
+                <img style="color: var(--bs-indigo);" width="100" height="100" aria-hidden="true"
+                    src="./assets/images/pdf_icon.png" alt="pdf_icon">
+                <button class="d-inline-flex align-items-center btn btn-primary btn-sm px-4 rounded-pill" type="button">
+                    Скачать PDF
+                </button>
+            </a>
+            <a href="./assets/pdf_files/Приграничные страны.pdf"
+                class="cards text-center d-flex flex-column align-items-center gap-4 border p-5 rounded-3 text-decoration-none"
+                target="_blank" rel="noopener noreferrer">
+                <h5>Приграничные страны</h5>
+                <img style="color: var(--bs-indigo);" width="100" height="100" aria-hidden="true"
+                    src="./assets/images/pdf_icon.png" alt="pdf_icon">
+                <button class="d-inline-flex align-items-center btn btn-primary btn-sm px-4 rounded-pill" type="button">
+                    Скачать PDF
+                </button>
+            </a>
+            <a href="./assets/pdf_files/Социальный жилищный мандат.pdf"
+                class="cards text-center d-flex flex-column align-items-center gap-4 border p-5 rounded-3 text-decoration-none"
+                target="_blank" rel="noopener noreferrer">
+                <h5>Социальный жилищный мандат</h5>
+                <img style="color: var(--bs-indigo);" width="100" height="100" aria-hidden="true"
+                    src="./assets/images/pdf_icon.png" alt="pdf_icon">
+                <button class="d-inline-flex align-items-center btn btn-primary btn-sm px-4 rounded-pill" type="button">
+                    Скачать PDF
+                </button>
+            </a>
+            <a href="./assets/pdf_files/Абонентский отопительный мандат.pdf"
+                class="cards text-center d-flex flex-column align-items-center gap-4 border p-5 rounded-3 text-decoration-none"
+                target="_blank" rel="noopener noreferrer">
+                <h5>Абонентский отопительный мандат</h5>
+                <img style="color: var(--bs-indigo);" width="100" height="100" aria-hidden="true"
+                    src="./assets/images/pdf_icon.png" alt="pdf_icon">
+                <button class="d-inline-flex align-items-center btn btn-primary btn-sm px-4 rounded-pill" type="button">
+                    Скачать PDF
+                </button>
+            </a>
+            <a href="./assets/pdf_files/Семейный отопительный мандат.pdf"
+                class="cards text-center d-flex flex-column align-items-center gap-4 border p-5 rounded-3 text-decoration-none"
+                target="_blank" rel="noopener noreferrer">
+                <h5>Семейный отопительный мандат</h5>
+                <img style="color: var(--bs-indigo);" width="100" height="100" aria-hidden="true"
+                    src="./assets/images/pdf_icon.png" alt="pdf_icon">
+                <button class="d-inline-flex align-items-center btn btn-primary btn-sm px-4 rounded-pill" type="button">
+                    Скачать PDF
+                </button>
+            </a>
+            <a href="./assets/pdf_files/Международный.pdf"
+                class="cards text-center d-flex flex-column align-items-center gap-4 border p-5 rounded-3 text-decoration-none"
+                target="_blank" rel="noopener noreferrer">
+                <h5>МЕЖДУНАРОДНЫЙ ФОРУМ</h5>
+                <img style="color: var(--bs-indigo);" width="100" height="100" aria-hidden="true"
+                    src="./assets/images/pdf_icon.png" alt="pdf_icon">
+                <button class="d-inline-flex align-items-center btn btn-primary btn-sm px-4 rounded-pill" type="button">
+                    Скачать PDF
+                </button>
+            </a>
+        </div>
+    </div>
+    <div class="b-example-divider"></div>
+    <div class="my-5">
+        <div class="p-5 text-center bg-body-tertiary">
+            <div class="container py-5">
+                <img src="./assets/images/post_2.png" alt="post_image" class="img-fluid rounded-3 mb-4"
+                    style="width: 100%; height: auto;">
+            </div>
+        </div>
+    </div>
+    <div class="b-example-divider"></div>
+    <div class="my-5">
+        <div class="p-5 text-center bg-body-tertiary">
+            <div class="container py-5">
+                <img src="./assets/images/post.png" alt="post_image" class="img-fluid rounded-3 mb-4"
+                    style="max-width: 100%; height: auto;">
+            </div>
+        </div>
+    </div>
+    <div class="b-example-divider"></div>
+    <div class="container my-5">
+        <div class="p-5 text-center bg-body-tertiary rounded-3">
+            <p class="lead">
+                Организатор международного форума:
+                <br>
+                Эстебесов А.: +996 (779) 786-347
+                <br>
+                Карагулов А.: +996 (704) 183-388
+            </p>
+        </div>
+    </div>
+    <div class="b-example-divider"></div>
+    <script src="../assets/dist/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
+</body>
+
+</html>
